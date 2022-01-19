@@ -107,21 +107,11 @@ This provides a way of automatically generating them with your prisma
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
-
-### Prerequisites
-
-This project utilizes yarn and if you plan on contributing, you should too.
-* npm
-  ```sh
-  npm install -g yarn
-  ```
-
 ### Installation
 
 1. Add zod-prisma as a dev dependency
     ```sh
-    yarn add -D zod-prisma # Not yet published
+    yarn add -D zod-prisma 
     ```
 
 2. Add the zod-prisma generator to your schema.prisma
@@ -129,14 +119,17 @@ This project utilizes yarn and if you plan on contributing, you should too.
     generator zod {
       provider      = "zod-prisma"
       output        = "./zod"
-      relationModel = "default" # Do not export model without relations.
-      # relationModel = true # Create and export both plain and related models.
-      # relationModel = false # Do not generate related model
+      // Do not export model without relations.
+      relationModel = "default" 
+      // relationModel = true # Create and export both plain and related models.
+      // relationModel = false # Do not generate related model
 
-      modelCase = "PascalCase" # (default) Output models using pascal case (ex. UserModel, PostModel)
-      # modelCase = "camelCase" # Output models using camel case (ex. userModel, postModel)
+      modelCase = "PascalCase" 
+      // (default) Output models using pascal case (ex. UserModel, PostModel)
+      // modelCase = "camelCase" Output models using camel case (ex. userModel, postModel)
       
-      modelSuffix = "Model" # (default) Suffix to apply to your prisma models when naming Zod schemas
+      modelSuffix = "Model" 
+      // (default) Suffix to apply to your prisma models when naming Zod schemas
     }
     ```
 
@@ -232,6 +225,13 @@ See the [open issues](https://github.com/CarterGrimmeisen/zod-prisma/issues) for
 
 <!-- CONTRIBUTING -->
 ## Contributing
+### Prerequisites
+
+This project utilizes yarn and if you plan on contributing, you should too.
+* npm
+  ```sh
+  npm install -g yarn
+  ```
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
